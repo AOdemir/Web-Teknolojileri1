@@ -1,4 +1,4 @@
 # Web-Teknolojileri1
 
 
-CSS, JS gibi basit teknolojiler içeren bir projedir.
+CSS, JS gibi yazılımlar kullanan basit bir projedir.
