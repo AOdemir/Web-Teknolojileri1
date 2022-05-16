@@ -1,4 +1,10 @@
+<?php 
 
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+ ?>
 	<html>
 
 		<head>
@@ -16,6 +22,7 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<font face="cinzel" size="4">
+						<h1>Hello, <?php echo $_SESSION['name']; ?></h1>
 						<ul class="nav">
 							<li><a href="hakkinda.html">Hakkında</a></li>
 							<li><a href="mirasimiz.html">Mirasımız</a></li>
@@ -27,11 +34,11 @@
 				</h3>
 		</div>
 
-<body background="1.jpg"style="background-color:lightblue;">
+<body class="A" background="1.jpg">
 
 
 
-<h2>Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisi</h2>
+<h2 allign="center">Sakarya Üniversitesi Bilgisayar Mühendisliği Öğrencisi</h2>
 
 Mail adresim : <a href="mailto:alperen.orsdemir@ogr.sakarya.edu.tr">
 

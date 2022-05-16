@@ -26,3 +26,21 @@ ul.nav a:hover,
 ul.nav li.current a {
     background:#086754;
 }
+#body
+
+.a{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.b{
+  background-image: url("2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.c{
+  background-image: url("SilverLining.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+

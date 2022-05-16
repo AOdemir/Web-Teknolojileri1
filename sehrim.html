@@ -1,14 +1,22 @@
 <html>
 
   <head>
+    <style>
+      *{margin:0;padding:0;}
+    #map{
+      height: 500px;
+      width:100%;
+    }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="stiller.css">
+    <link href="geoxml3.js">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 	<meta charset="utf-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 </head>
 <div></div>
-<div bacground="1.jpg" heigh=%100 width=%100>
+<div   class="div"bacground="1.jpg" backgroud-size= "heigh=%100 width=%100>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 		<h3 align="center">
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -27,7 +35,7 @@
 		</h3>
 </div>
 
-<body background="1.jpg">
+<body class="a" background="1.jpg">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
@@ -62,7 +70,7 @@
 <td>
 
 <p> İkinci Abdülhamit'in yaptırdığı tarihi demir köprüyü endüstriyelleşmenin şehre tesirinin örneği olarak görmenizi tavsiye ederim.</p>
-<a href="<div><a href="https://www.google.com/search?q=k%C4%B1r%C4%B1kkale+abd%C3%BClhamit+k%C3%B6pr%C3%BCs%C3%BC&oq=k%C4%B1r%C4%B1kkale+abd%C3%BClhamit+k%C3%B6pr%C3%BCs%C3%BC&aqs=edge..69i57.54031j1j1&sourceid=chrome&ie=UTF-8#">
+<div><a href="https://www.google.com/search?q=k%C4%B1r%C4%B1kkale+abd%C3%BClhamit+k%C3%B6pr%C3%BCs%C3%BC&oq=k%C4%B1r%C4%B1kkale+abd%C3%BClhamit+k%C3%B6pr%C3%BCs%C3%BC&aqs=edge..69i57.54031j1j1&sourceid=chrome&ie=UTF-8#">
 </div>">Köprü Adresi</a>
 
 <p> Kırıkkale İç anadolunun sanayi kentlerinden biridir. Doğudan göç alır ve batıya göç verir.
@@ -81,15 +89,21 @@
 <li>Sulakyurt.</li>
 
 </td>
-<div id="map"></div>
-<!-- Replace the value of the key parameter with your own API key. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkUOdZ5y7hMm0yrcCQoCvLwzdM6M8s5qk"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/geocodezip/geoxml3@master/polys/geoxml3.js"></script>
+<div id="map">
+<script>
+    function initmap(){
+      var location={lat:40.001922582450526,lng:34.0810029927198};
+      var map=new google.maps.Map(document.getElementById("map"),{
+      zoom: 11,
+      center:location});
+      var marker=new google.Marker({
+        position: location,
+        map: map
+      });
+}
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqU9GPkrxV8cAOn_Yq6nnRPIUSbbhJ2sscallback=initMap">  </script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
-
-
+</div>
 </body>
 </html>
